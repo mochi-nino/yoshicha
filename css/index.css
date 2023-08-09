@@ -1,0 +1,771 @@
+/* 大圖片 */
+
+
+
+.news h2,
+.dessert h2,
+.lineup h2 {
+
+    border-bottom: 2px solid #dd7335;
+    color: #dd7335;
+    padding-bottom: 10px;
+}
+
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.banner {
+    height: auto;
+}
+
+
+.main {
+    overflow: hidden;
+    position: relative;
+    /* height: calc(100vh - 125px); */
+}
+
+.slides {
+    width: 500%;
+    display: flex;
+
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.slide img {
+    /* height: 80%; */
+    width: 100%;
+    /* opacity: 0.5; */
+}
+
+/* 手動 */
+.navigation-manual {
+    position: absolute;
+    display: flex;
+    width: 1200px;
+    /* margin-top: 640px; */
+    justify-content: center;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    bottom: 20px;
+
+}
+
+.manual-btn {
+    border: 2px solid #dd7335;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px
+}
+
+.manual-btn:hover {
+    background-color: #dd7335;
+}
+
+#radio1:checked~.first {
+    margin-left: 0%;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+/* 手動end */
+
+/* 自動 */
+
+.navigation-auto {
+    display: flex;
+    position: absolute;
+    width: 1200px;
+    /* margin-top: 640px; */
+    justify-content: center;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    bottom: 20px;
+
+}
+
+.navigation-auto label {
+    border: 2px solid #dd7335;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    margin-inline: 20px;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: #dd7335;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #dd7335;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: #dd7335;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: #dd7335;
+}
+
+
+.design {
+    position: absolute;
+    bottom: -4%;
+    width: 600px;
+    height: 400px;
+    background-image: url(../img/te.png);
+}
+
+
+/* 最新消息 */
+
+.news {
+    height: 600px;
+    position: relative;
+    padding-bottom: 5%;
+    overflow: hidden;
+    z-index: 3;
+
+}
+
+.news-area {
+    margin: auto;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+
+
+}
+
+.news-tt {
+    margin: 50px;
+    margin-top: 20px;
+
+}
+
+.news-list {
+    overflow: scroll;
+    width: 750px;
+    height: 400px;
+}
+
+.news-list::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border: 2px solid #dd7335;
+}
+
+.news-list::-webkit-scrollbar-track {
+    background-color: #2D4E36;
+}
+
+.news-list::-webkit-scrollbar {
+    background-color: #2D4E36;
+    width: 10px;
+    height: 0px;
+
+}
+
+
+.news-list ul {
+    padding: 2px;
+    border-top: 1px solid #2D4E36;
+    margin-bottom: 5px;
+}
+
+.news-list ul:first-child,
+ul:last-child {
+    border-top: 1.5px solid #2D4E36;
+}
+
+.news-list .time {
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+.news-list .time span:first-of-type {
+    display: inline-block;
+    margin-left: 15px;
+    color: #ffffff;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.news .important {
+    background-color: #e65a5a;
+
+}
+
+.news .event {
+    background-color: #8226d8;
+
+}
+
+.news .products {
+    background-color: #5fc6ef;
+
+}
+
+.news-list .list-item {
+    position: relative;
+    padding-bottom: 5px;
+    margin: 5px;
+}
+
+.news-list .list-item p {
+    letter-spacing: 16.5%;
+}
+
+.news-list .list-item:hover {
+    color: #2D4E36;
+}
+
+.news-list .list-item:hover p {
+    color: #dd7335;
+}
+
+
+.news-list .list-item:hover .arrow {
+    transform: translateX(10px);
+    background-color: #dd7335;
+}
+
+.list-item .arrow {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #2D4E36;
+    border-radius: 1000px;
+    position: absolute;
+    left: 680px;
+    top: 50px;
+    transition: 0.25s ease;
+}
+
+.arrow::before {
+    content: "";
+    display: block;
+    border-right: 2px solid #EBF1D6;
+    border-bottom: 2px solid #EBF1D6;
+    width: 7px;
+    height: 7px;
+    transform: rotate(-45deg);
+    position: absolute;
+    z-index: 3;
+    bottom: 6px;
+    right: 6.5px;
+}
+
+.news-more-area,
+.dessert-more-area {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+}
+
+.news-more,
+.dessert-more,
+.maketea-page {
+    background-color: #2D4E36;
+    padding: 8px;
+    width: 120px;
+    height: 35px;
+    margin-top: 30px;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.news-more-area {
+    justify-content: end;
+}
+
+
+.news-more:hover,
+.dessert-more:hover,
+.maketea-page:hover {
+    background-color: #dd7335;
+    opacity: 0.9;
+}
+
+
+
+
+/* 最新消息end */
+
+/* 精選商品 */
+
+.lineup {
+    background-color: #2D4E36;
+    padding-bottom: 15%;
+    padding-top: 3%;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+
+.lineup-area {
+    width: 1200px;
+    margin: auto;
+}
+
+.lineup-tt,
+.dessert-tt {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+.lineup-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+
+.lineup-pic {
+    margin-inline: 60px;
+    margin-block: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.lineup-pic img {
+    width: 100%;
+    vertical-align: top;
+    border-radius: 50px 50px 50px 0px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+}
+
+.lineup-pic a::after {
+    content: "點撃選購";
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 1000px;
+    background-color: #dd7335;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 5px;
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    right: 130px;
+    bottom: 45px;
+    opacity: 0;
+    transition: opacity .7s ease;
+}
+
+.lineup span {
+    display: block;
+    background-color: #dd7335;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    width: fit-content;
+    padding: 10px;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0.5px;
+}
+
+
+.lineup-pic:hover {
+    opacity: 0.8;
+}
+
+.lineup-pic:hover a::after {
+    opacity: 0.8;
+    transition: opacity .5s ease;
+
+}
+
+.obj img:nth-child(1) {
+    width: 25%;
+    position: absolute;
+    right: -1%;
+    bottom: 15%;
+
+}
+
+.obj img:nth-child(2) {
+    width: 10%;
+    position: absolute;
+    right: 10%;
+    top: 5%;
+}
+
+.obj img:nth-child(3) {
+    width: 25%;
+    position: absolute;
+    left: -5%;
+    top: 30%;
+
+}
+
+
+/* 精選商品結束 */
+
+/* 甜點區 */
+.dessert {
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.dessert-list {
+    width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dessert-pic {
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 60%;
+
+
+}
+
+.dessert-pic img:hover {
+    scale: 1.1;
+}
+
+.dessert-pic img {
+    vertical-align: top;
+    border-radius: 60%;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+    transition: scale 0.3s linear;
+
+}
+
+
+.dessert-txt h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.dessert-txt p {
+    margin: 0 20px;
+    padding: 0 40px;
+}
+
+.dessert-more-area {
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.dessert-more a {
+    color: #ffffff;
+    padding: 5px;
+}
+
+/* 甜點結束 */
+
+/* 泡茶 */
+
+.make-tea {
+    background-image: url(../img/make-tea.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left 60% bottom 85%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 3px;
+}
+
+.make-tea::before {
+    content: "";
+    background-image: url(../img/line_3.0cee322.svg);
+    width: 100%;
+    height: 4px;
+    position: absolute;
+}
+
+.make-tea::after {
+    content: "";
+    background-image: url(../img/line_3.0cee322.svg);
+    width: 100%;
+    height: 4px;
+    /* bottom: 0px; */
+    position: absolute;
+}
+
+
+.make-tea-area {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+
+}
+
+.make-tea-area h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 30px;
+    letter-spacing: 2px;
+}
+
+.make-tea-area p {
+    color: #fff;
+    line-height: 28px;
+    margin-top: 10px;
+}
+
+.maketea-page {
+    margin: auto;
+    margin-top: 55px;
+}
+
+/* 泡茶結束 */
+
+
+/* 手機 */
+
+@media screen and (max-width:768px) {
+
+    .news h2,
+    .dessert h2,
+    .lineup h2 {
+        padding-bottom: 20px;
+    }
+
+    /* 輪播 */
+
+    .manual-btn {
+        padding: 3px;
+    }
+
+    .navigation-auto label {
+        padding: 3px;
+    }
+
+
+
+    .slide img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .navigation-manual {
+        width: 80%;
+    }
+
+    .navigation-auto {
+        width: 80%;
+    }
+
+    /* 最新消息 */
+
+    .news {
+        padding-bottom: 20px;
+    }
+
+    .news-area {
+        width: auto;
+        display: block;
+        margin: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .news-tt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 40px 0;
+    }
+
+    .news-list {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        overflow: initial;
+    }
+
+    .news-list .time span:first-of-type {
+        color: #ffffff;
+        width: 50px;
+        padding: 0 8px;
+    }
+
+    .news-list ul {
+        border-bottom: 1.5px solid #2D4E36;
+        border-top: 1.5px solid #2D4E36;
+    }
+
+    .news-list ul:first-child,
+    ul:nth-child(3) {
+        border-top: none;
+        border-bottom: none;
+    }
+
+
+    .news-list ul:nth-child(4),
+    .news-list ul:nth-child(5),
+    .news-list ul:nth-child(6),
+    .news-list ul:nth-child(7),
+    .news-list ul:nth-child(8) {
+        display: none;
+    }
+
+    .list-item .arrow {
+        display: none;
+    }
+
+    .news-more-area {
+        width: auto;
+        margin-right: 5%;
+    }
+
+
+
+    .news-more,
+    .dessert-more,
+    .maketea-page {
+        width: 100px;
+        height: 20px;
+    }
+
+    /* 精選商品 */
+
+    .lineup-area {
+        width: auto;
+    }
+
+    .lineup-item {
+        width: 100%;
+    }
+
+
+    .lineup-pic {
+        margin: 30px;
+    }
+
+
+    .lineup-pic a::after {
+        display: none;
+    }
+
+
+    .obj img:nth-child(1) {
+        width: 50%;
+        position: absolute;
+        right: -1%;
+        bottom: 4%;
+
+    }
+
+    .obj img:nth-child(2) {
+        width: 20%;
+        position: absolute;
+        right: 5%;
+        top: 10%;
+    }
+
+    .obj img:nth-child(3) {
+        width: 50%;
+        position: absolute;
+        left: -5%;
+        top: 50%;
+
+    }
+
+    /* 甜點 */
+
+    .lineup-tt,
+    .dessert-tt {
+        padding: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .dessert-list {
+        width: auto;
+        flex-wrap: wrap;
+    }
+
+    .dessert-item {
+        width: calc(100% / 2);
+        /* border: 1px solid red; */
+        margin-block: 10px;
+    }
+
+    .dessert-pic img {
+        width: 100%;
+    }
+
+    .dessert-txt p {
+        padding: 0;
+    }
+
+    .dessert-more-area {
+        width: 80%;
+    }
+
+    .make-tea-area {
+        width: auto;
+    }
+
+    .make-tea-area p {
+        margin-inline: 40px;
+    }
+
+    .maketea-page {
+        margin: auto;
+        margin-top: 40px;
+    }
+
+
+}

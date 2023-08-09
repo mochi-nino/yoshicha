@@ -1,0 +1,156 @@
+.main {
+    background-image: url(../img/qaz-pic.jpg);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    min-height: 450px;
+
+}
+
+.main .title {
+    background-image: url(../img/title-pic.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+    opacity: 0.8;
+}
+
+.main h1 {
+    line-height: 450px;
+    color: #0b5c22;
+    text-align: center;
+}
+
+/* 麵包屑 */
+
+.breadcrumb {
+    width: 1200px;
+    margin: auto;
+}
+
+.breadcrumb ul {
+    display: flex;
+    margin: 15px;
+}
+
+.breadcrumb li {
+    padding-block: 5px;
+}
+
+.breadcrumb ul li:not(:first-child)::before {
+    content: "/";
+    color: #2D4E36;
+    margin-left: 8px;
+}
+
+.breadcrumb a {
+    color: #2D4E36;
+}
+
+.breadcrumb a:hover {
+    color: #dd7335
+}
+
+/* 麵包屑end */
+
+/* 常見問題 */
+
+.qaz-wrap {
+    width: 1200px;
+    margin: auto;
+    margin-block: 60px;
+    margin-bottom: 100px;
+}
+
+.qaz-list {
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.qaz-title {
+    background-color: #2D4E36;
+    border-radius: 50px;
+    position: relative;
+    line-height: 50px;
+    padding-inline: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qaz-title h3 {
+    color: #fff;
+}
+
+.open-btn {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.qaz-item {
+    background-color: #eee;
+    border-radius: 30px;
+    margin-inline: 10px;
+    display: none;
+    overflow: hidden;
+}
+
+.qaz-item div {
+    padding: 30px;
+}
+
+.qaz-item h4 {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.qaz-item p:first-of-type {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:768px) {
+
+    .main {
+        background-position: left center;
+    }
+
+
+    .breadcrumb {
+        width: 100%;
+    }
+
+    .qaz-wrap {
+        width: 100%;
+    }
+
+    .qaz-list {
+        width: 90%;
+    }
+
+    .qaz-title {
+        line-height: 30px;
+    }
+
+    .qaz-title h3 {
+        font-size: 18px;
+    }
+
+    .open-btn {
+        font-size: 18px;
+    }
+
+    .qaz-item div {
+        padding: 5%;
+    }
+
+
+
+}

@@ -1,0 +1,335 @@
+.main .main_title {
+    font-size: 30px;
+    color: #2D4E36;
+    margin: auto;
+    margin-block: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main .title h2 {
+    line-height: 100px;
+}
+
+
+/* 購物車 */
+
+.cart_list {
+    width: 1200px;
+    margin: auto;
+}
+
+
+.step {
+    width: 600px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.step3 {
+    position: relative;
+}
+
+.step2 {
+    margin-inline: 150px;
+    position: relative;
+}
+
+.step span {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid #2D4E36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: #2D4E36;
+}
+
+
+.step p {
+    font-size: 20px;
+}
+
+.step1 span {
+    background-color: #dd7335;
+    border: 2px solid #dd7335;
+    color: #fff;
+}
+
+.step2::before,
+.step3::before {
+    content: "";
+    width: 200%;
+    height: 5px;
+    background-color: #2D4E36;
+    position: absolute;
+    left: -195%;
+    top: 30px;
+    z-index: -1;
+}
+
+
+table {
+    width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+    border-top: 2px solid #dd7335
+}
+
+table th {
+    padding: 40px;
+    font-size: 20px;
+}
+
+
+table td:nth-child(1) {
+    width: 10%;
+    vertical-align: middle;
+
+}
+
+table td {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 17px;
+}
+
+table .item img {
+    width: 150px;
+    vertical-align: top;
+}
+
+
+table .del-btn {
+    border: none;
+    color: red;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+
+
+.quantity input {
+    width: 20px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+}
+
+.quantity button {
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+    cursor: pointer;
+
+}
+
+.cart_check_box {
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+
+}
+
+.cart_metod {
+    width: 250px;
+}
+
+
+.cart_metod h3,
+.order_check h3 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dd7335;
+    ;
+
+}
+
+.check-method {
+    margin-top: 20px;
+}
+
+.check-method h4 {
+    margin-bottom: 10px;
+}
+
+.check-method select {
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #2D4E36;
+    border-radius: 5px;
+}
+
+
+.order_check {
+    margin-bottom: 50px;
+
+}
+
+.sub,
+.freight,
+.coupon,
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 30px;
+}
+
+.coupon .coupun_code {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 3px 4px;
+}
+
+
+.coupon .coupun_add {
+    background-color: #2D4E36;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.cart_list .total {
+    padding-top: 30px;
+    border-top: 2px solid #2D4E36;
+}
+
+.check_out {
+    background-color: #2D4E36;
+    border: none;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 16px;
+    margin-left: 60px;
+}
+
+@media screen and (max-width:768px) {
+
+    .cart_list {
+        width: 100%;
+    }
+
+
+    .step {
+        width: 90%;
+
+
+    }
+
+    .step p {
+        font-size: 16px;
+    }
+
+    .step2 {
+        margin-inline: 20%;
+
+    }
+
+
+    .step2::before,
+    .step3::before {
+        width: 200%;
+        left: -180%;
+        z-index: -1;
+    }
+
+
+    table {
+        width: 95%;
+
+    }
+
+    table th {
+        padding: 0;
+        padding-block: 1%;
+        font-size: 16px;
+        width: 22%;
+    }
+
+    table td {
+        font-size: 16px;
+    }
+
+    table .item td:first-child {
+        width: 20%;
+    }
+
+    table .item img {
+        width: 100%;
+    }
+
+    .title th:nth-child(5),
+    .item td:nth-child(5) {
+        display: none;
+    }
+
+
+    .quantity input {
+        width: 5px;
+    }
+
+    .quantity button {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cart_check_box {
+        width: 90%;
+        margin: auto;
+        margin-top: 20%;
+        flex-wrap: wrap;
+    }
+
+    .cart_metod {
+        width: 100%;
+    }
+
+    .check-method {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coupon .coupun_add {
+        padding: 2% 4%;
+    }
+
+    .order_check {
+        margin-block: 20%;
+        width: 100%
+    }
+
+    .check_out {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}

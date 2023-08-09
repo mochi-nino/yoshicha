@@ -1,0 +1,323 @@
+.main {
+    background-image: url(../img/make-tea.jpg);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    min-height: 450px;
+
+}
+
+.main .title {
+    background-image: url(../img/title-pic.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+    opacity: 0.8;
+}
+
+.main h1 {
+    line-height: 450px;
+    color: #0b5c22;
+    text-align: center;
+}
+
+
+/* 麵包屑 */
+
+.breadcrumb {
+    width: 1200px;
+    margin: auto;
+}
+
+.breadcrumb ul {
+    display: flex;
+    margin: 15px;
+}
+
+.breadcrumb li {
+    padding-block: 5px;
+}
+
+.breadcrumb ul li:not(:first-child)::before {
+    content: "/";
+    color: #2D4E36;
+    margin-left: 8px;
+}
+
+.breadcrumb a {
+    color: #2D4E36;
+}
+
+.breadcrumb a:hover {
+    color: #dd7335
+}
+
+/* 麵包屑end */
+
+/* 輕鬆泡茶 */
+
+
+
+.maketea-wrap {
+    width: 1200px;
+    margin: auto;
+}
+
+.maketea h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+    color: #dd7335;
+    padding-bottom: 40px;
+}
+
+.maketea h4 {
+    font-size: 22px;
+    margin-bottom: 40px;
+    letter-spacing: 6px;
+    padding-left: 40px;
+    padding-right: 80px;
+}
+
+.maketea p {
+    color: #fff;
+    letter-spacing: 3px;
+    padding-top: 20px;
+    line-height: 50px;
+}
+
+.maketea-list {
+    border-top: 1px solid #dd7335;
+}
+
+.maketea-item {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    margin-block: 180px;
+}
+
+.maketea-item:first-child {
+    margin-top: 80px;
+}
+
+.maketea-item .pic {
+    width: 1200px;
+    z-index: 3;
+
+}
+
+.maketea-item .pic img {
+    width: 100%;
+    vertical-align: top;
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.maketea-item .txt-area {
+    width: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.maketea-item .txt-content {
+    color: #fff;
+    background-color: #2D4E36;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    writing-mode: vertical-rl;
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 0px 20px 20px 0px;
+
+}
+
+.txt-content .point {
+    color: #ffa75e;
+}
+
+
+.maketea-item .txt-content>span {
+    display: block;
+    width: 45px;
+    border-radius: 50px;
+    /* background: linear-gradient(to top right, #f1ad5e, #dd7335); */
+    background-color: #dd7335;
+    border: 1px solid #fff;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .2));
+    text-align: center;
+    line-height: 45px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    writing-mode: horizontal-tb;
+}
+
+.maketea-item:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.maketea-item:nth-child(2n) .txt-content {
+    border-radius: 20px 0px 0px 20px;
+    writing-mode: vertical-lr;
+    margin-right: 0;
+}
+
+.maketea-item:nth-child(2n) .txt-content h4 {
+    padding-left: 80px;
+    padding-right: 40px;
+}
+
+.maketea-item:nth-child(2n) .txt-content>span {
+    left: 10px;
+}
+
+.maketea-item .go-shopping {
+    background-color: #dd7335;
+    padding: 5px;
+    width: 30px;
+    height: 120px;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 40px;
+    color: #fff;
+    letter-spacing: 3px
+}
+
+.maketea-item .go-shopping:hover {
+    opacity: 0.9;
+    transition: .1s ease;
+    color: #2D4E36;
+}
+
+/* page-top */
+
+.page-top {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    right: 25px;
+    top: 800px;
+}
+
+
+.page-top img {
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+
+    .breadcrumb {
+        width: 100%;
+    }
+
+    .maketea-wrap {
+        width: 100%;
+    }
+
+    .maketea-item {
+        width: 90%;
+        flex-wrap: wrap;
+        margin-block: 50%;
+    }
+
+    .maketea-item:last-child {
+        margin-bottom: 20%;
+    }
+
+    .maketea-item .pic {
+        width: 100%;
+
+    }
+
+    .maketea-item .pic img {
+        border-radius: 20px 20px 0 0;
+        box-shadow: none;
+    }
+
+    .maketea-item .txt-area {
+        width: 100%;
+        display: block;
+    }
+
+    .maketea-item .txt-content {
+        width: 100%;
+        height: auto;
+        writing-mode: inherit;
+        border-radius: 0px 0px 20px 20px;
+        text-align: left;
+        padding-top: 3%;
+    }
+
+    .maketea h4,
+    .maketea p {
+        margin: 0;
+        padding: 0;
+        padding-inline: 8%;
+        letter-spacing: 2px;
+    }
+
+    .maketea h4 {
+        margin-bottom: 5%;
+    }
+
+    .maketea-item .txt-content>span {
+        position: initial;
+        margin-bottom: 8%;
+        margin-left: 8%;
+        margin-top: 3%;
+    }
+
+    .maketea-item:first-child {
+        margin-top: 15%;
+    }
+
+    .maketea-item:nth-child(2n) {
+        flex-direction: row;
+    }
+
+    .maketea-item:nth-child(2n) .txt-content {
+        border-radius: 0;
+        writing-mode: inherit;
+        padding-top: 3%;
+        border-radius: 0 0 20px 20px;
+
+    }
+
+    .maketea-item:nth-child(2n) .txt-content h4 {
+        margin: 0;
+        padding: 0;
+        padding-inline: 8%;
+        margin-bottom: 5%;
+    }
+
+    .maketea-item .go-shopping {
+        width: 120px;
+        border-radius: 30px;
+        height: 40px;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+
+
+
+
+
+
+
+
+
+}
