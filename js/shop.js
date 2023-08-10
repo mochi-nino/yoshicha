@@ -26,3 +26,76 @@ for (let i = 0; i < heartsolid.length; i++) {
     });
 }
 
+
+
+let itemList, cartPos;
+itemList = $('.shop-list').offset().left
+cartPos = $('.cart').offset().left
+
+$('.fa-solid.fa-cart-plus').click(function () {
+    let item = $(this).parents('.shop-item')
+    let img = item.find('img').attr('src')
+    let itemX = item.offset().left - itemList
+    let itemY = item.offset().top
+
+
+
+    $('#show').stop().css({
+        left: itemX,
+        top: itemY,
+        width: '10%',
+        opacity: 1,
+    })
+        .find('img').attr('src', img).css({
+            width: "100%"
+        })
+
+
+    $('#show').animate({
+
+        left: cartPos,
+        top: 0,
+        width: 20,
+    }, 1200,
+
+        function () {
+            $("#show").css({
+                opacity: 0
+            })
+        })
+
+    let cartBox = $('.cart span').text()
+    if (cartBox < 20) {
+        cartBox++
+    }
+    else {
+        alert(`購物車已超過上限`)
+    }
+
+    $('.cart span').text(cartBox)
+    $('.cart span').css({
+        display: 'block',
+    })
+
+
+
+    $('.cart').animate({
+        opacity: 0.8,
+        scale: 1.2
+    }, 600,
+        function () {
+            $(".cart").css({
+                scale: '1',
+                opacity: '1'
+            })
+        })
+
+
+
+})
+
+
+
+
+
+

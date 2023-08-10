@@ -79,6 +79,24 @@ header {
     margin: 10px;
 }
 
+.cart {
+    position: relative;
+}
+
+.cart span {
+    width: 20px;
+    height: 20px;
+    background-color: #dd7335;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    font-size: 14px;
+    display: none;
+}
+
 
 .menu {
     display: flex;
@@ -86,6 +104,8 @@ header {
     justify-content: space-around;
     align-items: end;
     margin-inline: 1%;
+    transform: rotate();
+
 }
 
 a {
@@ -333,13 +353,13 @@ footer {
     }
 
 
-    .footer-nav{
+    .footer-nav {
         flex-wrap: wrap;
     }
 
     .footer-nav-item {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         padding-bottom: 5px;
         gap: 30px;
         text-align: center;

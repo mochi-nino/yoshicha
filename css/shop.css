@@ -175,6 +175,12 @@
     right: 10px;
     bottom: 10px;
     font-size: 16px;
+    z-index: 2;
+}
+
+.fa-solid.fa-cart-plus {
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 
@@ -197,11 +203,18 @@
     display: none;
 }
 
+#show {
+    z-index: 9999;
+    width: 200px;
+    position: absolute;
+}
+
 
 @media screen and (max-width:768px) {
 
     .breadcrumb {
         width: 100%;
+
     }
 
 

@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/shop.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
@@ -27,6 +30,7 @@
                 <div class="cart">
                     <a href="cart.html">
                         <i class="fa-solid fa-cart-shopping" style="color: #fff;" id="cart-i"></i>
+                        <span>0</span>
                     </a>
                 </div>
                 <div class="login">
@@ -112,7 +116,13 @@
         </nav>
     </div>
 
+
+    <div id="show">
+        <img src="" alt="">
+    </div>
+
     <section class="shop">
+
         <div class="shop-wrap">
             <div class="shop-side">
                 <nav class="shop-side-nav">
@@ -128,6 +138,7 @@
                 </nav>
             </div>
             <div>
+
                 <div class="shop-list">
                     <div class="shop-item">
                         <a href="">
@@ -377,6 +388,80 @@
             <p>本網站為緯育TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。</p>
         </div>
     </footer>
+
+
+    <!-- <script>
+
+
+        let itemList, cartPos;
+        itemList = $('.shop-list').offset().left
+        cartPos = $('.cart').offset().left
+
+        $('.fa-solid.fa-cart-plus').click(function () {
+            let item = $(this).parents('.shop-item')
+            let img = item.find('img').attr('src')
+            let itemX = item.offset().left - itemList
+            let itemY = item.offset().top
+
+
+
+            $('#show').stop().css({
+                left: itemX,
+                top: itemY,
+                width: '10%',
+                opacity: 1,
+            })
+                .find('img').attr('src', img).css({
+                    width: "100%"
+                })
+
+
+            $('#show').animate({
+
+                left: cartPos,
+                top: 0,
+                width: 20,
+            }, 1200,
+
+                function () {
+                    $("#show").css({
+                        opacity: 0
+                    })
+                })
+
+            let cartBox = $('.cart span').text()
+            if (cartBox < 20) {
+                cartBox++
+            }
+            else {
+                alert(`購物車已超過上限`)
+            }
+
+            $('.cart span').text(cartBox)
+            $('.cart span').css({
+                display: 'block',
+            })
+
+
+
+            $('.cart').animate({
+                opacity: 0.8,
+                scale: 1.2
+            }, 600,
+                function () {
+                    $(".cart").css({
+                        scale: '1',
+                        opacity: '1'
+                    })
+                })
+
+
+
+        })
+
+
+    </script> -->
+
     <script src="js/header.js"></script>
     <script src="js/shop.js"></script>
 

@@ -12,6 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/cart.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
@@ -121,7 +126,6 @@
                 <th>刪除</th>
             </tr>
             <tr class="item 1">
-
                 <td>
                     <img src="img/grtea-bag-removebg-preview.png" alt="茉香綠茶">
                 </td>
@@ -295,7 +299,15 @@
         </div>
     </footer>
 
+    <script>
+        $('.del-btn').click(function () {
+            $(this).parents().remove('.item')
+        })
 
+
+    </script>
+
+    <script src="js/cart.js"></script>
     <script src="js/header.js"></script>
 
 </body>
