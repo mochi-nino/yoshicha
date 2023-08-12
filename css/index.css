@@ -1,6 +1,10 @@
 /* 大圖片 */
 
 
+body {
+    /* overflow: hidden; */
+}
+
 
 .news h2,
 .dessert h2,
@@ -762,22 +766,22 @@ ul:last-child {
     }
 
 
-    .obj img:nth-child(1) {
+    .obj1 {
         width: 50%;
         position: absolute;
-        right: -1%;
+        right: 0;
         bottom: 4%;
 
     }
 
-    .obj img:nth-child(2) {
+    .obj2 {
         width: 20%;
         position: absolute;
         right: 5%;
         top: 10%;
     }
 
-    .obj img:nth-child(3) {
+    .obj3 {
         width: 50%;
         position: absolute;
         left: -5%;
