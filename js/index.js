@@ -62,40 +62,13 @@ slides.addEventListener('touchend', function () {
     startAutoSlide();
 });
 
-//動畫
-// $(function () {
-//     $(window).on('load scroll', function () {
-//         $('.news').each(function () {
-//             //ターゲットの位置を取得
-//             var target = $(this).offset().top
-//             //スクロール量を取得
-//             var scroll = $(window).scrollTop()
-//             //ウィンドウの高さを取得
-//             var height = $(window).height()
-//             //ターゲットまでスクロールするとフェードインする
-//             if (scroll > target - height) {
-//                 //クラスを付与
-//                 $(this).addClass('active')
-//             }
-//         });
-//     });
-// });
 
 $(function () {
     $(window).ready(function () {
         $('.main').each(function () {
-            //ターゲットの位置を取得
-            var target = $(this).offset().top
-            //スクロール量を取得
-            var scroll = $(window).scrollTop()
-            //ウィンドウの高さを取得
-            var height = $(window).height()
-            //ターゲットまでスクロールするとフェードインする
-            if (scroll > target - height) {
-                //クラスを付与
-                $(this).addClass('active')
-            }
-        });
+            $(this).addClass('active')
+        }
+        )
     });
 });
 
@@ -103,33 +76,24 @@ $(function () {
 $(function () {
     $(window).ready(function () {
         $('.news').each(function () {
-            //ターゲットの位置を取得
-            var target = $(this).offset().top
-            //スクロール量を取得
-            var scroll = $(window).scrollTop()
-            //ウィンドウの高さを取得
-            var height = $(window).height()
-            //ターゲットまでスクロールするとフェードインする
-            if (scroll > target - height) {
-                //クラスを付与
-                $(this).addClass('active')
-            }
-        });
+            $(this).addClass('active')
+        }
+        )
     });
 });
 
 $(function () {
     $(window).on('load scroll', function () {
         $('.lineup-area').each(function () {
-            //ターゲットの位置を取得
+
             var target = $(this).offset().top
-            //スクロール量を取得
+
             var scroll = $(window).scrollTop()
-            //ウィンドウの高さを取得
+
             var height = $(window).height()
-            //ターゲットまでスクロールするとフェードインする
+
             if (scroll > target - height) {
-                //クラスを付与
+
                 $(this).addClass('active')
             }
         });
@@ -139,15 +103,15 @@ $(function () {
 $(function () {
     $(window).on('load scroll', function () {
         $('.dessert').each(function () {
-            //ターゲットの位置を取得
+
             var target = $(this).offset().top
-            //スクロール量を取得
+
             var scroll = $(window).scrollTop()
-            //ウィンドウの高さを取得
+
             var height = $(window).height()
-            //ターゲットまでスクロールするとフェードインする
+
             if (scroll > target - height) {
-                //クラスを付与
+
                 $(this).addClass('active')
             }
         });
@@ -157,15 +121,15 @@ $(function () {
 $(function () {
     $(window).on('load scroll', function () {
         $('.obj1').each(function () {
-            //ターゲットの位置を取得
+
             var target = $(this).offset().top
-            //スクロール量を取得
+
             var scroll = $(window).scrollTop()
-            //ウィンドウの高さを取得
+
             var height = $(window).height()
-            //ターゲットまでスクロールするとフェードインする
+
             if (scroll > target - height) {
-                //クラスを付与
+
                 $(this).addClass('active-obj1')
             }
         });
@@ -176,15 +140,15 @@ $(function () {
 $(function () {
     $(window).on('load scroll', function () {
         $('.obj2').each(function () {
-            //ターゲットの位置を取得
+
             var target = $(this).offset().top
-            //スクロール量を取得
+
             var scroll = $(window).scrollTop()
-            //ウィンドウの高さを取得
+
             var height = $(window).height()
-            //ターゲットまでスクロールするとフェードインする
+
             if (scroll > target - height) {
-                //クラスを付与
+
                 $(this).addClass('active-obj2')
             }
         });
@@ -194,15 +158,15 @@ $(function () {
 $(function () {
     $(window).on('load scroll', function () {
         $('.obj3').each(function () {
-            //ターゲットの位置を取得
+
             var target = $(this).offset().top
-            //スクロール量を取得
+
             var scroll = $(window).scrollTop()
-            //ウィンドウの高さを取得
+
             var height = $(window).height()
-            //ターゲットまでスクロールするとフェードインする
+
             if (scroll > target - height) {
-                //クラスを付与
+
                 $(this).addClass('active-obj3')
             }
         });
@@ -212,15 +176,15 @@ $(function () {
 $(function () {
     $(window).on('load scroll', function () {
         $('.make-tea').each(function () {
-            //ターゲットの位置を取得
+
             var target = $(this).offset().top
-            //スクロール量を取得
+
             var scroll = $(window).scrollTop()
-            //ウィンドウの高さを取得
+
             var height = $(window).height()
-            //ターゲットまでスクロールするとフェードインする
+
             if (scroll > target - height) {
-                //クラスを付与
+
                 $(this).addClass('active')
             }
         });
