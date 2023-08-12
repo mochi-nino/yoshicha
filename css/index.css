@@ -342,6 +342,7 @@ ul:last-child {
     padding-bottom: 15%;
     padding-top: 3%;
     position: relative;
+    overflow: hidden;
 }
 
 
