@@ -60,7 +60,6 @@
 .access {
     width: 1200px;
     margin: auto;
-
 }
 
 .access-warp>h3 {
@@ -109,6 +108,7 @@
     width: 600px;
     height: 150px;
     padding: 5px 8px;
+    resize: none;
     font-size: 16px;
 }
 
@@ -135,6 +135,7 @@
     margin-block: 80px;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .shop .info {
@@ -157,6 +158,9 @@ iframe {
     width: 600px;
     height: 450px;
 }
+
+
+
 
 @media screen and (max-width:768px) {
 

@@ -62,12 +62,16 @@
 
 .about {
     margin: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
+    transform: translateY(30px);
+
 }
 
 .about-wrap {
     width: 1200px;
     margin: auto;
-
 }
 
 .about-card {
@@ -76,7 +80,7 @@
     align-items: center;
     margin: auto;
     width: 1000px;
-    margin-block: 200px;
+    margin-block: 150px;
     padding-inline: 30px;
 }
 
@@ -112,12 +116,24 @@
     border-radius: 10px;
     margin-bottom: 20px;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+
 }
+
+
 
 .about .item p {
     padding: 10px;
     line-height: 50px;
 }
+
+
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 
 
 @media screen and (max-width:768px) {

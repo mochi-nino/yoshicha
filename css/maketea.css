@@ -59,18 +59,127 @@
 /* 輕鬆泡茶 */
 
 
+.maketea {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
+    transform: translateY(30px);
+}
+
 
 .maketea-wrap {
     width: 1200px;
     margin: auto;
 }
 
+.maketea-wrap h3 img {
+    width: 100px;
+    vertical-align: top;
+    position: absolute;
+}
+
+.maketea-wrap h3 img:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform: scaleX(-1);
+    animation-name: bird;
+    animation-duration: 2.5s;
+}
+
+.maketea-wrap h3 img:nth-child(2) {
+    top: 0;
+    right: 0;
+    transform: scaleX(-1);
+    animation-name: bird2;
+    animation-duration: 2.5s;
+}
+
+
+@keyframes bird {
+    0% {
+        transform: translateY(0px);
+        left: 40%;
+    }
+
+    20% {
+        transform: translateY(-30px);
+        left: 30%;
+    }
+
+    40% {
+        transform: translateY(0);
+        left: 20%;
+    }
+
+    60% {
+        transform: translateY(-30px);
+        left: 10%;
+    }
+
+    70% {
+        transform: translateY(0);
+        left: 0;
+    }
+
+    90% {
+        transform: translateY(-50px);
+
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes bird2 {
+    0% {
+        transform: translateY(0px);
+        right: 40%;
+    }
+
+    20% {
+        transform: translateY(-30px);
+        right: 30%;
+    }
+
+    40% {
+        transform: translateY(0);
+        right: 20%;
+    }
+
+    60% {
+        transform: translateY(-30px);
+        right: 10%;
+    }
+
+    70% {
+        transform: translateY(0);
+        right: 0;
+    }
+
+    90% {
+        transform: translateY(-50px);
+
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+
+}
+
+
 .maketea h3 {
     font-size: 24px;
     text-align: center;
     margin-top: 50px;
     color: #dd7335;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
+    position: relative;
 }
 
 .maketea h4 {
@@ -235,16 +344,31 @@
 
 .tree {
     display: block;
-    width: 350px;
+    width: 300px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
+}
+
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.activetree {
+    opacity: 1;
+    visibility: visible;
     animation-name: tree;
-    animation-duration: 8s;
+    animation-duration: 6s;
 }
 
 @keyframes tree {
     0% {
-        scale: 1.2;
+        scale: 0;
         width: 0px;
     }
 
@@ -255,8 +379,6 @@
 }
 
 
-
-
 @media screen and (max-width:768px) {
 
     .breadcrumb {
@@ -265,6 +387,10 @@
 
     .maketea-wrap {
         width: 100%;
+    }
+
+    .maketea-wrap h3 img {
+        width: 15%;
     }
 
     .maketea-item {

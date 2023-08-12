@@ -1,4 +1,5 @@
 
+
 let heartsolid = document.getElementsByClassName("fa-regular fa-heart");
 let heartFull = document.getElementsByClassName("fa-solid fa-heart");
 

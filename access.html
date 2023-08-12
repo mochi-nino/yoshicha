@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/access.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -166,6 +169,7 @@
                     </table>
                 </div>
                 <div class="map">
+
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.249037620926!2d121.22015178651314!3d24.957640284305462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ea50c732a5%3A0x1b5e6ee66e9fec49!2z57ev6IKyVGliYU1l6ZmE6Kit5Lit5aOi6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1690016823308!5m2!1szh-TW!2stw"
                         style="border:0;" allowfullscreen="" loading="lazy"
@@ -254,6 +258,50 @@
         </div>
     </footer>
     <script src="js/header.js"></script>
+
+    <script>
+
+        let orginalText
+
+        $(':text').focus(function () {
+            orginalText = $(this).attr('placeholder');
+            $(this).attr('placeholder', '')
+        }).blur(function () {
+            if ($(this).val() == '') {
+                $(this).attr('placeholder', orginalText)
+            }
+        })
+
+        let orginalEmail
+
+        $('input[type="email"]').focus(function () {
+            orginalEmail = $(this).attr('placeholder');
+            $(this).attr('placeholder', '')
+        }).blur(function () {
+            if ($(this).val() == '') {
+                $(this).attr('placeholder', orginalEmail)
+            }
+        })
+
+        let orginalmun
+
+        $('input[type="tel"]').focus(function () {
+            orginalmun = $(this).attr('placeholder');
+            $(this).attr('placeholder', '')
+        }).blur(function () {
+            if ($(this).val() == '') {
+                $(this).attr('placeholder', orginalmun)
+            }
+        })
+
+
+
+
+
+
+
+
+    </script>
 </body>
 
 </html>
