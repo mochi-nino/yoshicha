@@ -78,21 +78,38 @@
     position: absolute;
 }
 
-.maketea-wrap h3 img:nth-child(1) {
+.bird {
     top: 0;
     left: 0;
     transform: scaleX(-1);
-    animation-name: bird;
-    animation-duration: 2.5s;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
 }
 
-.maketea-wrap h3 img:nth-child(2) {
+.active-bird {
+    animation-name: bird;
+    animation-duration: 2.5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.bird2 {
     top: 0;
     right: 0;
     transform: scaleX(-1);
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
+}
+
+.active-bird2 {
     animation-name: bird2;
     animation-duration: 2.5s;
+    opacity: 1;
+    visibility: visible;
 }
+
 
 
 @keyframes bird {

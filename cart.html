@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/cart.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
         integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -137,13 +136,12 @@
                 </td>
                 <td>
                     <div class="quantity">
-                        <button><i class="fa-solid fa-minus" style="color: #080808;"></i></button>
-                        <input type="text" value="1">
-                        <button><i class="fa-solid fa-plus" style="color: #080808;"></i></button>
+                        <button class="btn-sub">－</button>
+                        <input class="amount" type="number" value="1" readonly="readonly">
+                        <button class="btn-plus">＋</button>
                     </div>
-
                 </td>
-                <td>
+                <td class="place">
                     NT$999
                 </td>
                 <td>
@@ -162,12 +160,12 @@
                 </td>
                 <td>
                     <div class="quantity">
-                        <button><i class="fa-solid fa-minus" style="color: #080808;"></i></button>
-                        <input type="text" value="1">
-                        <button><i class="fa-solid fa-plus" style="color: #080808;"></i></button>
+                        <button class="btn-sub">－</button>
+                        <input class="amount" type="number" value="1" readonly="readonly">
+                        <button class="btn-plus">＋</button>
                     </div>
                 </td>
-                <td>
+                <td class="place">
                     NT$999
                 </td>
                 <td>
@@ -198,7 +196,7 @@
                 <h3>訂單資訊</h3>
                 <div class="sub">
                     <p>小計</p>
-                    <p>NT$1998</p>
+                    <p class="all-place">NT$1998</p>
                 </div>
                 <div class="freight">
                     <p>運費</p>
@@ -211,7 +209,7 @@
                 </div>
                 <div class="total">
                     <p>合計</p>
-                    <p>NT$2058</p>
+                    <p class="total-place">NT$2058</p>
                 </div>
                 <a href="#" class="check_out">前往結帳</a>
             </div>
@@ -299,13 +297,6 @@
         </div>
     </footer>
 
-    <script>
-        $('.del-btn').click(function () {
-            $(this).parents().remove('.item')
-        })
-
-
-    </script>
 
     <script src="js/cart.js"></script>
     <script src="js/header.js"></script>
