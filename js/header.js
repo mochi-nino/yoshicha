@@ -56,21 +56,57 @@ window.addEventListener("scroll", function () {
 
 //登入
 
+// $('.login').click(function () {
+//     $('.login-page').css({
+//         display: 'block'
+//     })
+
+//     $('.login-area').addClass('active-login');
+
+//     $('.login-area span').click(function () {
+//         $('.login-area').removeClass('active-login');
+
+//         $('.login-page').css({
+//             display: 'none'
+//         })
+
+//     })
+//     $('.login-banner').click(function () {
+//         $('.login-area').removeClass('active-login');
+//         $('.login-page').css({
+//             display: 'none'
+//         })
+
+//     })
+// })
+
 $('.login').click(function () {
     $('.login-page').css({
         display: 'block'
     })
+
+    $('.login-area').addClass('active-login');
+
     $('.login-area span').click(function () {
-        $('.login-page').css({
-            display: 'none'
-        })
-    })
+        $('.login-area').removeClass('active-login');
+
+        setTimeout(function () {
+            $('.login-page').css({
+                display: 'none'
+            });
+        }, 300); // 1000 毫秒即 1 秒延迟
+    });
+
     $('.login-banner').click(function () {
-        $('.login-page').css({
-            display: 'none'
-        })
-    })
-})
+        $('.login-area').removeClass('active-login');
+
+        setTimeout(function () {
+            $('.login-page').css({
+                display: 'none'
+            });
+        }, 300); // 1000 毫秒即 1 秒延迟
+    });
+});
 
 let orginalLoginEmail
 

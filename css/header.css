@@ -177,11 +177,10 @@ a {
     height: 35px;
 }
 
-/* //登入 */
+/* 登入 */
 .login-page {
     display: none;
 }
-
 
 
 .login-area {
@@ -192,13 +191,43 @@ a {
     margin: auto;
     z-index: 999;
     background-color: #fff;
-    top: 0;
     bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     height: 400px;
+    animation-name: loginout;
+    animation-duration: 1s;
 
 }
+
+.active-login {
+    animation-name: login;
+    animation-duration: 0.5s;
+}
+
+@keyframes login {
+    0% {
+        bottom: -100vh;
+    }
+
+    100% {
+        top: 0;
+        bottom: 0;
+    }
+}
+
+@keyframes loginout {
+    0% {
+        bottom: 0;
+    }
+
+    100% {
+        bottom: -500vh;
+    }
+}
+
+
 
 .login-area span {
     display: block;
