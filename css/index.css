@@ -440,7 +440,7 @@ ul:last-child {
     bottom: 15%;
     opacity: 0;
     visibility: hidden;
-    transition: 1.5s;
+    transition: .8s;
 }
 
 .obj2 {
@@ -450,7 +450,7 @@ ul:last-child {
     top: -100%;
     opacity: 0;
     visibility: hidden;
-    transition: 1.7s;
+    transition: 1s;
 }
 
 .obj3 {
@@ -460,7 +460,7 @@ ul:last-child {
     top: 30%;
     opacity: 0;
     visibility: hidden;
-    transition: 1.7s;
+    transition: 1s;
 }
 
 
@@ -544,10 +544,6 @@ ul:last-child {
     position: relative;
     overflow: hidden;
     padding-bottom: 3px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 1.5s;
-    transform: translateY(30px);
 }
 
 .make-tea::before {

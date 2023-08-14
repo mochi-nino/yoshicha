@@ -300,6 +300,7 @@
     .news-item .pic img {
         border: 2px solid #ddd;
         box-sizing: border-box;
+        filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 
     }
 

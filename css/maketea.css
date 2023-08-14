@@ -359,15 +359,6 @@
     width: 100%;
 }
 
-.tree {
-    display: block;
-    width: 300px;
-    margin: auto;
-    margin-bottom: 2px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 1.5s;
-}
 
 
 .active {
@@ -376,24 +367,6 @@
     transform: translateY(0);
 }
 
-.activetree {
-    opacity: 1;
-    visibility: visible;
-    animation-name: tree;
-    animation-duration: 6s;
-}
-
-@keyframes tree {
-    0% {
-        scale: 0;
-        width: 0px;
-    }
-
-    100% {
-        scale: 1.2;
-        width: 300px;
-    }
-}
 
 
 @media screen and (max-width:768px) {

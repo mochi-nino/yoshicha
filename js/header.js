@@ -54,6 +54,50 @@ window.addEventListener("scroll", function () {
 
 
 
+//登入
+
+$('.login').click(function () {
+    $('.login-page').css({
+        display: 'block'
+    })
+    $('.login-area span').click(function () {
+        $('.login-page').css({
+            display: 'none'
+        })
+    })
+    $('.login-banner').click(function () {
+        $('.login-page').css({
+            display: 'none'
+        })
+    })
+})
+
+let orginalLoginEmail
+
+$('.login-page input[type="email"]').focus(function () {
+    orginalLoginEmail = $(this).attr('placeholder');
+    $(this).attr('placeholder', '')
+}).blur(function () {
+    if ($(this).val() == '') {
+        $(this).attr('placeholder', orginalLoginEmail)
+    }
+})
+
+
+let orginalLoginPW
+
+$('.login-page input[type="password"]').focus(function () {
+    orginalLoginPW = $(this).attr('placeholder');
+    $(this).attr('placeholder', '')
+}).blur(function () {
+    if ($(this).val() == '') {
+        $(this).attr('placeholder', orginalLoginPW)
+    }
+})
+
+
+
+
 // 手機板
 
 const hamburger = document.querySelector(".hamburger");

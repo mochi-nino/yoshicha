@@ -118,6 +118,8 @@ $(function () {
     });
 });
 
+
+//圖片動畫
 $(function () {
     $(window).on('load scroll', function () {
         $('.obj1').each(function () {
@@ -173,21 +175,4 @@ $(function () {
     });
 });
 
-$(function () {
-    $(window).on('load scroll', function () {
-        $('.make-tea').each(function () {
-
-            var target = $(this).offset().top
-
-            var scroll = $(window).scrollTop()
-
-            var height = $(window).height()
-
-            if (scroll > target - height) {
-
-                $(this).addClass('active')
-            }
-        });
-    });
-});
 
