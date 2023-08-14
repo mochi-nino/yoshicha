@@ -122,7 +122,6 @@ table .del-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 }
 
 .quantity input {
@@ -139,6 +138,7 @@ table .del-btn {
     background-color: transparent;
     font-size: 20px;
     cursor: pointer;
+    color: #666;
 
 }
 
@@ -289,7 +289,7 @@ table .del-btn {
 
 
     .quantity input {
-        /* width: 5px; */
+        width: 30%;
         font-size: 14px;
     }
 
